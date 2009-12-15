@@ -47,6 +47,7 @@ html, body
       +aside-background
 #body-background
   :bottom 0
+  :left 0
   :position fixed
   :height 100%
   :width 100%
@@ -62,7 +63,9 @@ html, body
       :width 330px
   .background
     :height 100%
+    :left 0
     :position absolute
+    :top 0
     :width 100%
   .background .right, .background .left
     :height 100%
@@ -81,7 +84,9 @@ html, body
   .background
     +section-background
     :height 100%
+    :left 0
     :position absolute
+    :top 0
     :width 50%
   .container
     +aside-background
@@ -252,7 +257,8 @@ html, body
 @import _header.sass
 
 .header
-  :background-color !ancillary_darkest
+  .logo
+    :background-color = !ancillary_darkest
   .header
     :background-image url(/images/help/pattern-yukiwa_sakura.png)
     :background-repeat repeat-x
