@@ -64,41 +64,30 @@ html, body
     :height 100%
     :position absolute
     :width 100%
+  .background .right, .background .left
+    :height 100%
+    :position absolute
+    :width 50%
   .background .right
     :background-color #21222b
-    :height 100%
-    :position absolute
     :right 0
-    :width 50%
   .background .left
     :background-color #252630
-    :height 100%
-    :left 0
-    :position absolute
-    :width 50%
+    :left 0    
 .container
   :width 100%
   :min-height 100%
   :position relative
   .background
-    :background-color #252630
-    :background-image url(/images/help/section-background-purple.png)
-    :background-position left top
-    :background-repeat repeat-x
+    +section-background
     :height 100%
     :position absolute
     :width 50%
   .container
-    :background-color #21222B
-    :background-image url(/images/help/aside-background-purple.png)
-    :background-position left top
-    :background-repeat repeat-x
+    +aside-background
     :position relative
     :text-align center   
     +background(60px, "none")
-    .background
-      .left, .right
-        :position absolute
     .shadow
       :background-image url(/images/help/aside-shadow-purple.png)
       :background-repeat repeat-y
@@ -125,10 +114,7 @@ html, body
         section, .section
           +reset-block
       aside, .aside
-        :background-color #21222b
-        :background-image url(/images/help/aside-background-purple.png)
-        :background-position left top
-        :background-repeat repeat-x
+        +aside-background
         :padding 30px
         :width 265px
         :float right
@@ -266,6 +252,7 @@ html, body
 @import _header.sass
 
 .header
+  :background-color !ancillary_darkest
   .header
     :background-image url(/images/help/pattern-yukiwa_sakura.png)
     :background-repeat repeat-x
