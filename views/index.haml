@@ -24,6 +24,12 @@
     %meta{:name => "apple-mobile-web-app-capable", :content => "yes"}/
     %meta{:name => "apple-mobile-web-app-status-bar-style", :content => "black-translucent"}/
   %body
+    #body-background.container
+      .background
+        .left
+        .right 
+      .container
+        .shadow 
     .container
       :plain
         <a href="http://github.com/seaofclouds/fix-me"><img style="position: absolute; z-index:1000; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" /></a>
@@ -31,10 +37,25 @@
         .logo my fancy header
         .header
           .shadow
-          %h1 Help me fix this layout!
-            
+          %h1 Help me fix this layout!   
       .container
+        .background
         .content.container
+          .shadow
+          .aside
+            .aside
+              %h2 Sidebar Item 1
+              %h3
+                %a.outlink{:href=>"http://twitter.com/seaofclouds"} twitter.com
+              %p
+                Sidebar Content
+            .aside
+              %h2 Sidebar Item 2
+              %h3
+                %a.outlink{:href=>"http://github.com/seaofclouds"} github.com
+              %p
+                More Sidebar Content
+          
           .section
             .section
               .header
@@ -79,29 +100,4 @@
                   %p OR: if you're in San Francisco, I'll deliver you a pint and payment at the next github meetup.
             
             
-          .aside
-            .shadow
-            .aside
-              %h2 Sidebar Item 1
-              %h3
-                %a.outlink{:href=>"http://twitter.com/seaofclouds"} twitter.com
-              %p
-                Sidebar Content
-            .aside
-              %h2 Sidebar Item 2
-              %h3
-                %a.outlink{:href=>"http://github.com/seaofclouds"} github.com
-              %p
-                More Sidebar Content
-        .background
-          .left
-          .right
       .footer
-      #body-background.container
-        .background
-          .left
-          .right
-        .content.container
-          .section
-          .aside
-            .shadow
